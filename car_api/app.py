@@ -39,7 +39,7 @@ def create_car():
     return jsonify(car), 201
 
 
-@app.route("/cars/<int:car_id>", methods=["PUT"])
+@app.route("/cars/<int:car_id>", methods=["PATCH"])
 def update_car(car_id):
     car = find_car(car_id)
     if car is None:
